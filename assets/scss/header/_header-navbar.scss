@@ -1,0 +1,39 @@
+.header-navbar {
+  
+    display: grid;
+    justify-items: end;
+    letter-spacing: 0.1em;
+    
+    
+  
+    &__list {
+        display: flex;
+      
+        margin: 0 (-$gap) 0 0;
+        padding: 0;
+      
+        list-style: none;
+      }
+
+      &__btn {
+        display: none;
+      }
+
+      &__link {
+        display: block;
+      
+        padding: $gap;
+        letter-spacing: 0.088em;
+        font-size: 1.125rem;
+        transition: color 0.5s;
+       
+        &:hover, 
+        &:focus{
+          color: $color-accent;
+        }
+  
+      }
+}
+
+  
+  

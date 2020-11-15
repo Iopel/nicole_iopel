@@ -1,0 +1,65 @@
+@import "variables";
+@import "skin";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+
+  color: $color-gray;
+  font-family: $font-main;
+  font-size: $font-size;
+}
+
+h1 {
+  letter-spacing: 0.08em;
+
+  color: $color-light;
+
+  font-family: $font-header;
+  font-size: 3.75rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+
+  color: $color-light;
+}
+
+
+.btn,
+.btn-accent {
+  display: block;
+
+  height: 60px;
+  padding: 18px $gap;
+
+  transition: background-color 0.5s;
+  text-align: center;
+  letter-spacing: 0.1em;
+
+  font-size: 1.125rem;
+}
+
+.btn {
+  min-width: 250px;
+
+  border: 2px solid $color-light;
+  background-color: $color-light;
+}
+
+.btn-accent {
+  min-width: 350px;
+
+  border: 2px solid $color-primary;
+  background-color: $color-primary;
+}
+
+.btn:hover,
+.btn-accent:hover {
+  background-color: $color-accent;
+}
