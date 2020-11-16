@@ -39,6 +39,10 @@
       letter-spacing: 0.1em;
     
       font-size: 1.25rem;
+
+      @media(max-width: 768px){
+        font-size: 1.125rem;
+      }
     }
   
     &__link {

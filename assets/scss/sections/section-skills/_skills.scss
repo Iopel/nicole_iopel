@@ -1,6 +1,11 @@
 .skills {
     margin-bottom: 30px;
     padding: 10px;
+
+    @media(max-width: 576px){
+      padding: 20px;
+      margin-bottom: 0;
+    }
   
     &__container {
       display: grid;
@@ -10,6 +15,30 @@
       grid-gap: 10px;
       grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
       grid-template-columns: repeat(4, 1fr);
+
+      @media(max-width: 992px){
+          display: grid;
+      
+          grid-gap: 10px;
+          grid-template-areas: "a1 a1 a2 " "a3 a4 a4 " "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
+          grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media(max-width: 768px){
+          display: grid;
+
+          grid-gap: 10px;
+          grid-template-areas: "a1 a2 " "a3 a2 " "a4 a4" "a5 a6" "a5 a7" "a8 a9";
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media(max-width: 576px){
+          display: grid;
+          grid-gap: 20px;
+          grid-template-areas: "a1" "a2 " "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+          grid-template-columns: 1fr;          
+        }
+      
     }
   
     &__button {

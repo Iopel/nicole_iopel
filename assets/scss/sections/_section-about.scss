@@ -1,0 +1,118 @@
+.about{
+    display: block;
+    background-color: #e5e5e5;
+    letter-spacing: 0.055em;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    
+
+    @media(max-width: 992px){
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @media(max-width: 768px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    &__container{
+        display: grid;
+        grid-template-areas: "t l i";
+        padding-right: 20px;
+        padding-left: 20px;
+        margin: auto;
+        max-width: 1340px;
+        
+        @media(max-width: 576px){
+            grid-template-areas: "t" "i"; 
+        }
+      }
+
+
+      &__text{
+        position: relative;
+        grid-area: t;
+        font-size: 1.125em;
+
+        @media(max-width: 992px){
+            font-size: 1rem;
+        }
+
+
+        p{
+            &:first-of-type{
+                position: relative;
+                margin-top: -5px;
+              }
+
+              &:last-of-type{
+                margin: 0px;
+              }
+
+              @media(max-width: 768px){
+                font-size: 1rem;
+              }
+        }
+    }
+
+      &__img{
+        display: grid;
+        grid-area: i;
+        align-content: center;
+        justify-items: center;
+        
+        img{
+            align-content: center;
+            justify-items: center;
+            
+            @media(max-width: 768px){
+                max-height: 424px;
+                min-width: 100%;
+            }
+
+            @media(max-width: 576px){
+                margin-top: 20px;
+                max-height: 480px;
+                min-width: auto;
+            }
+            
+          }
+
+      }
+
+      &__line{
+        position: relative;
+        grid-area: l;
+        height: auto;
+        margin-top: 146px;
+        width: 100px;
+
+        @media(max-width: 992px){
+            width: 45px;
+            margin-top: 112px;
+        }
+
+        @media(max-width: 768px){
+            width: 20px;
+            margin-top: 92px;
+        }
+
+        @media(max-width: 576px){
+            display: none;
+        }
+
+        span{
+            display: block;
+            width: 2px;
+           
+            background-color: rgba(99, 117, 136, 0.1);
+            content: "";
+            margin-left: calc(49% - 2px);
+            height: 200px;
+          
+          }
+          
+      }
+
+  }
