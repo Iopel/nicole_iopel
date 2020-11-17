@@ -2,29 +2,35 @@
     display: block;
     background-color: #e5e5e5;
     letter-spacing: 0.055em;
-    padding-top: 100px;
-    padding-bottom: 100px;
     
+    
+    @include lg-min{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
 
-    @media(max-width: 992px){
+    @include lg-md{
         padding-top: 80px;
         padding-bottom: 80px;
     }
 
-    @media(max-width: 768px) {
+    @include md{
         padding-top: 60px;
         padding-bottom: 60px;
     }
 
     &__container{
         display: grid;
-        grid-template-areas: "t l i";
+    
         padding-right: 20px;
         padding-left: 20px;
         margin: auto;
         max-width: 1340px;
         
-        @media(max-width: 576px){
+        @include sm-min{
+            grid-template-areas: "t l i";
+        }
+        @include sm{
             grid-template-areas: "t" "i"; 
         }
       }
@@ -33,9 +39,11 @@
       &__text{
         position: relative;
         grid-area: t;
-        font-size: 1.125em;
-
-        @media(max-width: 992px){
+    
+        @include lg-min{
+            font-size: 1.125em;
+        }
+        @include lg{
             font-size: 1rem;
         }
 
@@ -48,10 +56,6 @@
 
               &:last-of-type{
                 margin: 0px;
-              }
-
-              @media(max-width: 768px){
-                font-size: 1rem;
               }
         }
     }
@@ -66,12 +70,12 @@
             align-content: center;
             justify-items: center;
             
-            @media(max-width: 768px){
+            @include md-sm{
                 max-height: 424px;
                 min-width: 100%;
             }
 
-            @media(max-width: 576px){
+            @include sm{
                 margin-top: 20px;
                 max-height: 480px;
                 min-width: auto;
@@ -85,20 +89,23 @@
         position: relative;
         grid-area: l;
         height: auto;
-        margin-top: 146px;
-        width: 100px;
+        
 
-        @media(max-width: 992px){
+        @include lg-min{
+            margin-top: 146px;
+            width: 100px;
+        }
+        @include lg-md{
             width: 45px;
             margin-top: 112px;
         }
 
-        @media(max-width: 768px){
+        @include md-sm{
             width: 20px;
             margin-top: 92px;
         }
 
-        @media(max-width: 576px){
+        @include sm{
             display: none;
         }
 

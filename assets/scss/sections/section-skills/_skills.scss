@@ -1,8 +1,11 @@
 .skills {
-    margin-bottom: 30px;
-    padding: 10px;
 
-    @media(max-width: 576px){
+    @include sm-min{
+      margin-bottom: 30px;
+      padding: $gap / 2;
+    }
+      
+    @include sm{
       padding: 20px;
       margin-bottom: 0;
     }
@@ -11,29 +14,31 @@
       display: grid;
     
       margin-bottom: $gap;
-    
-      grid-gap: 10px;
-      grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
-      grid-template-columns: repeat(4, 1fr);
-
-      @media(max-width: 992px){
-          display: grid;
       
-          grid-gap: 10px;
+      @include sm-min{
+        grid-gap: $gap / 2;
+      }
+
+      @include lg-min{
+        grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+        grid-template-columns: repeat(4, 1fr);
+      }
+      @include lg-md{
+      
+          grid-gap: $gap / 2;
           grid-template-areas: "a1 a1 a2 " "a3 a4 a4 " "a5 a5 a6" "a7 a8 a6" "a7 a9 a9";
           grid-template-columns: repeat(3, 1fr);
         }
 
-        @media(max-width: 768px){
-          display: grid;
+        @include md-sm{
+  
 
-          grid-gap: 10px;
+          grid-gap: $gap / 2;
           grid-template-areas: "a1 a2 " "a3 a2 " "a4 a4" "a5 a6" "a5 a7" "a8 a9";
           grid-template-columns: repeat(2, 1fr);
         }
 
-        @media(max-width: 576px){
-          display: grid;
+        @include sm{
           grid-gap: 20px;
           grid-template-areas: "a1" "a2 " "a3" "a4" "a5" "a6" "a7" "a8" "a9";
           grid-template-columns: 1fr;          

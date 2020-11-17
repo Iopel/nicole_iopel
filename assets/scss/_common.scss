@@ -19,19 +19,22 @@ h1 {
   color: $color-light;
 
   font-family: $font-header;
-  font-size: 3.75rem;
+  
   font-weight: 300;
   line-height: 1.2;
 
-  @media(max-width: 992px){
+  @include lg-min{
+    font-size: 3.75rem;
+  }
+  @include lg-md{
     font-size: 2.5rem;
   }
 
-  @media(max-width: 768px){
+  @include md-sm{
     font-size: 1.875rem;
   }
 
-  @media(max-width: 576px){
+  @include sm{
     font-size: 1.875rem;
   }
 }
@@ -39,24 +42,27 @@ h1 {
 h2{
   display: block;
   margin-top: 0;
-  margin-bottom: 56px;
-  font-size: 2.5rem;
+  
   font-family: $font-header;
   color: $color-primary;
   letter-spacing: 0.1em;
   line-height: 1.2em;
 
-  @media(max-width: 992px){
+  @include lg-min{
+    margin-bottom: 56px;
+    font-size: 2.5rem;
+  }
+  @include lg-md{
     font-size: 2rem;
     margin-bottom: 42px;
   }
 
-  @media(max-width: 768px){
+  @include md{
     margin-bottom: 36px;
     font-size: 1.5rem;
   }
 
-  @media(max-width: 576px){
+  @include sm{
     text-align: center;
   }
 }
@@ -83,12 +89,14 @@ a {
 }
 
 .btn {
-  min-width: 250px;
-
-  border: 2px solid $color-light;
+   border: 2px solid $color-light;
    background-color: rgba(255, 255, 255, 0.1);
 
-   @media(max-width: 992px){
+   @include lg-min{
+    min-width: 250px;
+   }
+
+   @include lg-md{
     min-width: 200px;
     height: 50px;
     padding-top: 14px;
@@ -97,23 +105,24 @@ a {
     font-size: 1rem;
    }
 
-   @media(max-width: 768px){
+   @include md{
     min-width: 170px;
     height: 40px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: $gap / 2;
+    padding-bottom: $gap / 2;
     letter-spacing: 0.05em;
    }
 
 }
 
 .btn-accent {
-  min-width: 350px;
-
   border: 2px solid $color-primary;
   background-color: $color-primary;
 
-  @media(max-width: 576px){
+  @include sm-min{
+    min-width: 350px;
+  }
+  @include sm{
     min-width: 100%;
   }
 }

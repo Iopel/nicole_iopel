@@ -1,4 +1,4 @@
-
+@import "../mixins-media";
 
 .header-content {
   position: relative;
@@ -10,33 +10,42 @@
   &__title {
     display: block;
 
-    margin: 0 0 53px 0;
+    
 
     text-align: center;
 
-    @media(max-width: 992px){
+    @include lg-min{
+      margin: 0 0 53px 0; 
+    }
+
+    @include lg-md{
       margin: 0 0 43px 0;
     }
 
-    @media(max-width: 768px){
+    @include md{
       margin: 0 0 33px 0;
     }
+
+    
   }
 
   &__btns {
     display: flex;
     justify-content: center;
 
-    @media(max-width: 576px){
+
+    @include sm{
       align-items: center;
       flex-direction: column;
       width: 100%;    
     }
 
     .btn:first-of-type {
-      margin-right: $gap;
-
-      @media(max-width: 576px){
+    
+      @include sm-min{
+        margin-right: $gap;
+      }
+      @include sm{
         margin-right: 0;
         margin-bottom: 20px;       
       }
