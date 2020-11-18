@@ -1,125 +1,120 @@
-.about{
-    display: block;
-    background-color: #e5e5e5;
-    letter-spacing: 0.055em;
-    
-    
-    @include lg-min{
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
+.about {
+  display: block;
 
-    @include lg-md{
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
+  letter-spacing: 0.055em;
 
-    @include md{
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
+  background-color: #e5e5e5;
 
-    &__container{
-        display: grid;
-    
-        padding-right: 20px;
-        padding-left: 20px;
-        margin: auto;
-        max-width: 1340px;
-        
-        @include sm-min{
-            grid-template-areas: "t l i";
-        }
-        @include sm{
-            grid-template-areas: "t" "i"; 
-        }
-      }
-
-
-      &__text{
-        position: relative;
-        grid-area: t;
-    
-        @include lg-min{
-            font-size: 1.125em;
-        }
-        @include lg{
-            font-size: 1rem;
-        }
-
-
-        p{
-            &:first-of-type{
-                position: relative;
-                margin-top: -5px;
-              }
-
-              &:last-of-type{
-                margin: 0px;
-              }
-        }
-    }
-
-      &__img{
-        display: grid;
-        grid-area: i;
-        align-content: center;
-        justify-items: center;
-        
-        img{
-            align-content: center;
-            justify-items: center;
-            
-            @include md-sm{
-                max-height: 424px;
-                min-width: 100%;
-            }
-
-            @include sm{
-                margin-top: 20px;
-                max-height: 480px;
-                min-width: auto;
-            }
-            
-          }
-
-      }
-
-      &__line{
-        position: relative;
-        grid-area: l;
-        height: auto;
-        
-
-        @include lg-min{
-            margin-top: 146px;
-            width: 100px;
-        }
-        @include lg-md{
-            width: 45px;
-            margin-top: 112px;
-        }
-
-        @include md-sm{
-            width: 20px;
-            margin-top: 92px;
-        }
-
-        @include sm{
-            display: none;
-        }
-
-        span{
-            display: block;
-            width: 2px;
-           
-            background-color: rgba(99, 117, 136, 0.1);
-            content: "";
-            margin-left: calc(49% - 2px);
-            height: 200px;
-          
-          }
-          
-      }
-
+  @include lg-min {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
+  @include lg-md {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include md {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  &__container {
+    display: grid;
+
+    max-width: 1340px;
+    margin: auto;
+    padding-right: 20px;
+    padding-left: 20px;
+
+    @include sm-min {
+      grid-template-areas: "t l i";
+    }
+    @include sm {
+      grid-template-areas: "t" "i";
+    }
+  }
+
+
+  &__text {
+    position: relative;
+
+    grid-area: t;
+    @include lg-min {
+      font-size: 1.125em;
+    }
+    @include lg {
+      font-size: 1rem;
+    }
+
+
+    p {
+      &:first-of-type {
+        position: relative;
+
+        margin-top: -5px;
+      }
+
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+
+  &__img {
+    display: grid;
+    align-content: center;
+
+    grid-area: i;
+    justify-items: center;
+
+    img {
+      align-content: center;
+
+      @include md-sm {
+        min-width: 100%;
+        max-height: 424px;
+      }
+      @include sm {
+        min-width: auto;
+        max-height: 480px;
+        margin-top: 20px;
+      }
+      justify-items: center;
+    }
+  }
+
+  &__line {
+    position: relative;
+
+    height: auto;
+
+    grid-area: l;
+    @include lg-min {
+      width: 100px;
+      margin-top: 146px;
+    }
+    @include lg-md {
+      width: 45px;
+      margin-top: 112px;
+    }
+    @include md-sm {
+      width: 20px;
+      margin-top: 92px;
+    }
+    @include sm {
+      display: none;
+    }
+
+    span {
+      display: block;
+
+      width: 2px;
+      height: 200px;
+      margin-left: calc(49% - 2px);
+
+      content: "";
+
+      background-color: rgba(99, 117, 136, 0.1);
+    }
+  }
+}

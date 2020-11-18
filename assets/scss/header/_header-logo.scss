@@ -10,13 +10,14 @@
     font-size: 1.5rem;
   }
 
+
+
   &__accent {
     display: inline-block;
 
     margin-right: 4px;
     padding: 14px 1px 13px 5px;
 
-    border: $color-highlight;
+    border: 3px solid $color-highlight;
   }
 }
-

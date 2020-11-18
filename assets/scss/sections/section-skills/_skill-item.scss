@@ -1,89 +1,85 @@
 .skill-item {
-    position: relative;
-  
-    overflow: hidden;
-  
-    min-height: calc(33.333vh - 13.3333px);
-  
-    background-color: blue;
-  
-    &__img {
-      position: absolute;
-      @extend %all_0;
-    
-      transition: transform 0.5s;
-    
-      background-color: $color-primary;
-      background-position: 50% 50%;
-      background-size: cover;
-    }
-  
-    &__overlay {
-      position: absolute;
-      z-index: 1;
-      @extend %all_0;
-    
-      transition: opacity 0.5s;
-    
-      opacity: 0.8;
-      background-color: $color-primary ;
-    }
-  
-    &__title {
-      position: absolute;
-      z-index: 2;
-      @extend %all_0;
-    
-      margin: 0;
-    
-      letter-spacing: 0.1em;
-    
-      @include md-min{
-        font-size: 1.25rem;
-      }
-      
+  position: relative;
 
-      @include md{
-        font-size: 1.125rem;
-      }
-    }
-  
-    &__link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    
-      width: 100%;
-      height: 100%;
-      padding: $gap;
-    
-      transition: color 0.5s;
-    }
-  
-    &:hover {
-      .skill-item__overlay {
-        opacity: 0.95;
-      }
-  
-      .skill-item__img {
-        transform: scale(1.1);
-      }
-  
-      .skill-item__link {
-        color: $color-accent;
-      }
-  
-    }
-    
-  
+  overflow: hidden;
+
+  min-height: calc(33.333vh - 13.3333px);
+
+  background-color: blue;
+
+  &__img {
+    position: absolute;
+
+    transition: transform 0.5s;
+
+    background-color: $color-primary;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    @extend %all_0;
   }
-  
 
-  @for $i  from 1 through 9{
-    .skill-item:nth-of-type(#{$i}) {
-      grid-area: a#{$i};
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+
+    transition: opacity 0.5s;
+
+    opacity: 0.8;
+    background-color: $color-primary ;
+
+    @extend %all_0;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 2;
+
+    margin: 0;
+
+    letter-spacing: 0.1em;
+
+    @extend %all_0;
+    @include md-min {
+      font-size: 1.25rem;
+    }
+    @include md {
+      font-size: 1.125rem;
     }
   }
 
-  
-  
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: $gap;
+
+    transition: color 0.5s;
+  }
+
+  &:hover {
+    .skill-item__overlay {
+      opacity: 0.95;
+    }
+
+    .skill-item__img {
+      transform: scale(1.1);
+    }
+
+    .skill-item__link {
+      color: $color-accent;
+    }
+  }
+}
+
+
+@for $i  from 1 through 9 {
+  .skill-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
+  }
+}
+
+
