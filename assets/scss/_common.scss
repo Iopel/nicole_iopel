@@ -122,13 +122,6 @@ a {
 .btn-accent {
   border: 2px solid $color-primary;
   background-color: $color-primary;
-
-  @include sm-min {
-    min-width: 350px;
-  }
-  @include sm {
-    min-width: 100%;
-  }
 }
 
 .btn:hover,
