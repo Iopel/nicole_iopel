@@ -71,6 +71,15 @@ h2 {
   }
 }
 
+h3 {
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: $color-gray;
+
+  font-family: $font-header;
+}
+
 a {
   text-decoration: none;
 
@@ -121,6 +130,7 @@ a {
 
 .btn-accent {
   border: 2px solid $color-primary;
+  border: 2px solid #2d3651;
   background-color: $color-primary;
 }
 
