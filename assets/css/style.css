@@ -1175,6 +1175,13 @@ a {
 .footer__social a {
   display: block;
   padding: 10px;
+  -webkit-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.footer__social a:hover, .footer__social a:focus {
+  color: #d66926;
 }
 
 .footer__social .fab {

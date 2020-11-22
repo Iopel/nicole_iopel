@@ -38,6 +38,12 @@
       display: block;
 
       padding: 10px;
+      transition: color 0.5s;
+
+      &:hover,
+      &:focus{
+        color: $color-accent ;
+      }
     }
 
     .fab {
