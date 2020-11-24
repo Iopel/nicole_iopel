@@ -3,9 +3,16 @@
 
   overflow: hidden;
 
-  min-height: calc(33.333vh - 13.3333px);
+
 
   background-color: blue;
+
+  @include h-max{
+    min-height: calc(230px - 20px * 0.666);
+  }
+  @include h-min{
+    min-height: calc(33.333vh - 20px * 0.666);
+  }
 
   &__img {
     position: absolute;

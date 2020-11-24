@@ -22,13 +22,6 @@
 
     h2 {
       margin-top: 0;
-
-      @include lg-min {
-        font-size: 1.125rem;
-      }
-      @include lg-md {
-        font-size: 2rem;
-      }
     }
   }
 
