@@ -534,6 +534,7 @@ a {
 }
 
 .header {
+  position: relative;
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
