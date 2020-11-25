@@ -6,13 +6,15 @@
 
 
   background-color: blue;
-
+  min-height: calc(33.333vh - 13.3333px);
+/*
   @include h-max{
     min-height: calc(230px - 20px * 0.666);
   }
   @include h-min{
     min-height: calc(33.333vh - 20px * 0.666);
   }
+  */
 
   &__img {
     position: absolute;
@@ -47,6 +49,7 @@
     letter-spacing: 0.1em;
 
     @extend %all_0;
+    
     @include md-min {
       font-size: 1.25rem;
     }
