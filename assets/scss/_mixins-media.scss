@@ -184,14 +184,10 @@
   }
 }
 
-@mixin h-max {
-  @media (max-height: 690px){
-    @content;
-  }
+@mixin min-h {
+ 
 }
 
-@mixin h-min {
-  @media (min-width: 691px){
-    @content;
-  }
+@mixin max-h {
+  
 }
