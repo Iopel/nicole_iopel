@@ -52,8 +52,6 @@
     display: flex;
     justify-content: center;
 
-    opacity: 0.8;
-
     .btn-accent {
       @include sm-min {
         min-width: 350px;
